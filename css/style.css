@@ -180,7 +180,7 @@ div.tab {
     overflow: hidden; 
     /*border: 1px solid #ccc; 
     background-color: #f1f1f1;*/
-    margin:40px 0px;
+    margin:40px -10px;
 }
  
 /* định dạng các button tab */
@@ -190,7 +190,7 @@ div.tab ul li{
 	display: inline-block;
 	padding: 15px 30px;
 	font-weight: 700;
-	margin-right: -4px;
+	/*margin-right: -4px;*/
 	cursor: pointer;
 	position: relative;
     z-index: 1;
@@ -256,5 +256,25 @@ div.tab ul li::after{
     font-weight:500;
     text-align: center;
     margin:30px 0px;
+    display:block;
 }
 
+/**/
+#sooner-recipe-wrapped{
+    background: #F8F9FB;
+    padding:20px 0px;
+}
+#sooner-recipe-wrapped .sooner-recipe-inside img{
+    border-radius: 50%;
+    width:100%;
+    display:block;
+}
+#sooner-recipe-wrapped .sooner-recipe-content h3 {
+    font-weight:700;
+    display:block;
+}
+#sooner-recipe-wrapped .sooner-recipe-content p {
+    font-size:14px;
+    display:block;
+    margin:35px 0px;
+}
