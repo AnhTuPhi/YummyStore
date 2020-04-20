@@ -2,6 +2,29 @@
     margin: 0;
     padding:0;
 }
+img:hover {
+    opacity:0.8;
+}
+.load{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100000000000;
+	display: block;
+	overflow: hidden;
+}
+.load img{
+	width: 150px;
+	height: 150px;
+	position: absolute; 
+	top: 50%;
+	left: 50%;
+	margin-top: -75px;
+	margin-left: -75px;
+}
 #logo-wrapped .logo-img{
     width:100%;
 }
@@ -11,36 +34,85 @@
     width:320px;
     height:80px;
 }
-#nav-wrapped{
-    width:100%;
-    text-align:center;
+
+/**/
+.topnav{
+    background: #fff;
+    overflow:hidden;
+    text-align: center;
     margin-bottom:40px;
 }
-#nav-wrapped .container .inner p,#nav-wrapped .container .inner ul{
+.topnav a{
     display:inline-block;
-}
-#nav-wrapped .container .inner ul .i{
-    height:15px;
-    width:1px;
-    background: #333333;
-    cursor: pointer;
-}
-#nav-wrapped .container .inner ul li, #nav-wrapped .container .inner ul .i{
-    display: inline-block;
+    color:rgb(88, 80, 80);
+    font-size:14px;
+    text-align:center;
     text-decoration: none;
-    margin:0px 10px;
-    font-size:18px;
-    font-weight:bold;
-    text-transform: capitalize;
+    padding:20px;
 }
-#nav-wrapped .container .inner ul li a{
+.topnav a:hover:not(:last-child){
+    border-bottom:2px solid #FC0254;
+    color:#0f0f0f;
+    background: #fff;  
     text-decoration: none;
-    color:#333333;
+    font-weight: 700;
 }
-#nav-wrapped .container .inner ul li a:hover{
-    color:#FC0254;
-    border-bottom:1px solid #FC0254;
+.topnav a.active{
+    border-bottom:2px solid #FC0254;
+    color:#0f0f0f;
+    background: #fff;    
 }
+.topnav .icon{
+    display:none;
+}
+.topnav a:nth-child(2){
+    display:none;
+}
+@media screen and (max-width:600px){
+    #logo-wrapped .logo-img{
+        width:100%;
+    }
+    #logo-wrapped .logo-img img {
+        margin:50px auto;
+        display:block;
+        width:280px;
+        height:70px;
+    }
+    .topnav a:not(:first-child){
+        display:none;
+    }
+    
+    .topnav a.icon {
+        float:right;
+        display:block;
+    }
+}
+@media screen and (max-width:600px){
+
+    .topnav.responsive{ 
+        position:relative;
+        
+    }
+    .topnav.responsive a.icon {
+        position: absolute;
+        right:0;
+        top:0;
+        
+    }
+    .topnav a:first-child {
+       position:absolute;
+       left:0;
+    }
+    .topnav.responsive a{
+        display:block;
+        text-align: center;
+        
+    }
+    .topnav.responsive a:hover:not(:first-child){
+        border-bottom:none;
+    }
+}
+/**/
 #banner-wrapped #carousel-banner .owl-carousel-banner{
     margin:0px;
     padding:0px;
@@ -277,4 +349,98 @@ div.tab ul li::after{
     font-size:14px;
     display:block;
     margin:35px 0px;
+}
+/*HOME FOOTER MORE INFO*/
+#home-footer-more-info .container .inner .row ul {
+    padding: 0px;
+}
+#home-footer-more-info .container .inner .row ul li {
+text-decoration:none;
+list-style:none;
+}
+#home-footer-more-info .container .inner .row ul li p, #home-footer-more-info .container .inner .row ul li a {
+font-size:14px;
+color:#1f1f1f;
+display: block;
+}
+#home-footer-more-info .container .inner .row h2{
+    font-size: 23px;
+}
+/**/
+#home-link {
+    margin:20px 0px;
+}
+#home-link .container {
+    background: #EEEEEE;
+    padding: 15px 65px;
+    display: inline-block;
+    width: 100%;
+}
+
+#home-link .container .inner .row h2 {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'Roboto';
+    font-weight: 900;
+    color: #43546e;
+}
+
+#home-link .container .inner .row h1{
+    font-size:35px;
+    color:red;
+    font-family: 'Roboto';
+    font-weight: 900;
+}
+#home-link .container .inner .row i {
+    margin-left: 20px;
+    display: inline-block;
+}
+
+#home-link .container .inner .row a {
+    font-size: 20px;
+    color: ;
+    font-family: 'Roboto';
+    font-weight: 900;
+    text-decoration: none;
+}
+
+#home-link .container .inner .row a .facebook{
+    color: blue;
+}
+
+#home-link .container .inner .row a .youtube{
+    color: red;
+}
+#home-link .container .inner .row input {
+    width: 250px;
+    height: 40px;
+    min-height: 40px;
+    background: #fff;
+    border: 0px;
+    outline: 0px;
+}
+
+#home-link .container .inner .row button {
+    height: 40px;
+    line-height: 40px;
+    width: 100px;
+    border: 0px;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+    background: #43546e;
+    color: #fff;
+    text-transform: uppercase;
+}
+body .footer-copy-right {
+    background: #FC0254;
+    clear: left;
+     padding: 10px;
+}
+
+body .footer-copy-right p {
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+
 }
